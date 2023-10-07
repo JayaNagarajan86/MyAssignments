@@ -18,7 +18,7 @@ public class CreateAccount {
 	    driver.findElement(By.linkText("CRM/SFA")).click();
 	    driver.findElement(By.linkText("Accounts")).click();
 	    driver.findElement(By.linkText("Create Account")).click();
-		driver.findElement(By.id("accountName")).sendKeys("Selenium Automation tester65");
+		driver.findElement(By.id("accountName")).sendKeys("Selenium Automtion tester1234");
 		String AccName= driver.findElement(By.id("accountName")).getText();
 		 WebElement ind=driver.findElement(By.name("industryEnumId"));
 		 Select ind1=new Select (ind);
@@ -29,6 +29,7 @@ public class CreateAccount {
 		 WebElement sour=driver.findElement(By.name("dataSourceId"));
 		 Select dd3=new Select (sour);
 		 dd3.selectByValue("LEAD_EMPLOYEE");
+		 Thread.sleep(2000);
 		 
 		 WebElement camp=driver.findElement(By.id("marketingCampaignId"));
 		 Select dd4=new Select (camp);
@@ -36,12 +37,14 @@ public class CreateAccount {
 		 WebElement state=driver.findElement(By.id("generalStateProvinceGeoId"));
 		 Select dd5=new Select (state);
 		 dd5.selectByValue("TX");
+		 
+		 
 		driver.findElement(By.className("smallSubmit")).click();
 		Thread.sleep(2000);
 		System.out.println(driver.findElement(By.xpath("//div[text()='Account Details']")).getText());
 		
 		driver.findElement(By.id("sectionHeaderTitle_accounts")).getText();
-	    System.out.println(driver.findElement(By.xpath("//span[contains(text(),'Selenium Automation tester')]")).getText());
+	    System.out.println(driver.findElement(By.xpath("//span[contains(text(),'Selenium Automtion tester1234')]")).getText());
 		driver.close();
 		
 	}	
